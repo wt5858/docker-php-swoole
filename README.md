@@ -28,7 +28,7 @@ git clone git@github.com:wt5858/docker-php-swoole.git
 或者下载 zip 压缩包也可以。
 
 ### 3.docker-compose 构建项目
-进入 docker-compose.yml 所在目录：
+进入 docker-compose.yml 所在目录（也就是file目录）：
 执行命令：
 ```
 docker-compose up
