@@ -29,17 +29,17 @@ git clone git@github.com:wt5858/docker-php-swoole.git
 
 ### 3.docker-compose 构建项目
 进入 docker-compose.yml 所在目录（也就是file目录）：
-执行命令：
+- 执行命令：
 ```
 docker-compose up
 ```  
 
-没问题，就让容器后台运行：  
+- 没问题，就让容器后台运行：  
 ```
 docker-compose up -d
 ``` 
 
-其它容器操作
+- 其它容器操作
 ```
 docker-compose start xxx  启动某个容器
 
@@ -47,10 +47,26 @@ docker-compose stop  xxx  停止某个容器
 
 docker-compose restart xxx 重启某个容器
 
+docker-compose logs xxx 查看某个容器的日志
+
 docker-compose exec xxx bash  以命令行的方式进入容器（有的可能是把bash换成sh） 
 ``` 
 
-关闭所有容器并删除服务：
+- 启动成功后可以看下容器是否运行正常
+```
+docker ps
+```
+- 如果有没启动成功的就可以先查看日志，修改后再重新启动
+
+- 这里可能会出现的问题有 data里面的目录权限问题，可以如下修改
+```
+chmod -R 755 xxx
+或
+chown -R www-data:www-data xxx
+```
+
+
+- 关闭所有容器并删除服务：
 ```
 docker-compose down
 ```
