@@ -4,6 +4,7 @@
 /data/redis/
 /data/backup/
 /data/mysql/
+/data/esdata/
 !/data/backup/README.txt
 !/data/mysql/README.txt
 /logs/mysql/*.log
